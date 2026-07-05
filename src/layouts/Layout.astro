@@ -1,3 +1,9 @@
+---
+import '../styles/global.css';
+// Supports weights 100-900
+import '@fontsource-variable/onest/wght.css';
+import Navbar from '../components/navbar.astro';
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -7,17 +13,20 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
+		<link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+		
+		
 	</head>
-	<body>
+	<body class="pt-24">
+		<Navbar client:load class="z-10 bg-white" />
 		<slot />
+		<script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 	</body>
-</html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+	</html>
+	
+	<style>
+		html,
+		body {
+		font-family: Onest, sans-serif;
 	}
 </style>
